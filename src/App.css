@@ -53,7 +53,7 @@
     font-family: ' Menlo';
     color: rgb(226, 211, 212);
     font-size: 100px;
-    text-shadow: 1px 1px 20px rgb(75, 36, 37);
+    text-shadow: 0px 0px 15px #000;
 }
 .menu {
     width: 100%;

@@ -13,7 +13,7 @@ const MainCard = ({ v }) => {
                     <Card.Img variant="top" src={v.strMealThumb}/>
                 <Card.Body>
                     <Link to={"/meal/" + v.idMeal}>
-                        <Card.Title style={{color:'white'}}>
+                        <Card.Title style={{color:'black'}}>
                         {v.strMeal}
                         </Card.Title>
                     </Link>

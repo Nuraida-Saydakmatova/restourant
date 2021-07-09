@@ -16,7 +16,7 @@ function Category() {
                     offset: 100,
                     duration: 500,
                     easing: 'ease-out-cubic',
-                    delay: 500,
+                    delay: 100,
                 })
                 setCategory(response.data.categories)
                 // console.log(response.data.categories);
