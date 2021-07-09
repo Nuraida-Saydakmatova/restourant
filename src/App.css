@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;1,300;1,400&display=swap');
+body{
+    font-family: 'Montserrat', sans-serif;
+}
 .red {
     background-color: #da5757;
 }
@@ -15,11 +19,31 @@
     display: flex;
     text-align: center;
     justify-content: center;
-    border: none;
-    background-color: rgba(134, 134, 116, 0);
-
+    background-color: rgba(14, 13, 12, 0.562);
+    overflow: hidden;
+    transition: 0.5s;
+    border-radius: 10px;
+    padding: 10px;
 }
-
+.card_img:hover{
+    transition: 0.5s;
+    transform: scale(1.02);
+}
+.card_1{
+    background-color: white;
+}
+.map_cards{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    min-height: 92vh;
+    background-color: grey;
+}
+.map_cards2{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
 .allcards {
     display: flex;
     justify-content: center;
@@ -32,7 +56,10 @@
     display: flex;
     justify-content: center;
 }
-
+.title1{
+    color: rgb(22, 21, 21);
+    text-shadow:0px 0px 5px gold;
+}
 .generalBasket {
     height: 100vh;
     display: flex;
@@ -41,23 +68,81 @@
 }
 
 .image {
-    background-image: url('https://www.restaurantszibo.com/wp-content/uploads/2019/10/zibo_notre_menu.jpg?x98183');
+    background-image: url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80');
     background-repeat: no-repeat;
     background-size: cover;
-    height: 700px;
+    height: 556px;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-attachment: fixed;
 }
 .nameOfRes {
     font-family: ' Menlo';
-    color: rgb(226, 211, 212);
+    color: rgb(238, 206, 25);
     font-size: 100px;
-    text-shadow: 1px 1px 20px rgb(75, 36, 37);
+    font-weight: bold;
+    letter-spacing: 10px;
+    text-shadow: 1px 1px 20px rgb(31, 30, 29);
 }
 .menu {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 20px;
+}
+.menu h1{
+    color: gold;
+    font-weight: bold;
+    text-shadow: 0px 0px 10px black;
+    letter-spacing: 10px;
+    font-size: 45px;
+}
+.title{
+    color: gold;
+    font-weight: 700;
+    text-shadow: 0px 0px 2px black;
+}
+.category_img{
+    background-image: url('https://krot.info/uploads/posts/2020-01/1579562739_25-p-foni-s-kafe-86.jpg');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.test{
+    margin-top: 20px;
+}
+.bg_color_card{
+    background-color:rgb(0, 0, 0);
+    border-radius: 10px;
+}
+.basket_1{
+    display: flex;
+    justify-content: space-between;
+}
+.nav_text{
+    color: gold !important;
+}
+.card_block{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.img_exact{
+    max-width: 700px;
+    max-height: 70vh;
+}
+.exact_block{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.img_exact_box{
+    margin: 20px;
+}
+.text_exact_box{
+    text-align: center;
+    margin: 20px;
 }

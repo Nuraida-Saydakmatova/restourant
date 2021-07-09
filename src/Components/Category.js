@@ -27,27 +27,29 @@ function Category() {
     }, []);
 
     return (
-        <div>
+        <div className={'category_img'}>
             <div className={'image'} ><h1 data-aos="zoom-in-up" className={'nameOfRes'}>Your magic day</h1></div>
-            <Row>
-                <div className={'menu'}>
-                    <h1>CATEGORIES</h1>
-                </div>
+            <div className={'menu'}>
+                <h1>CATEGORIES</h1>
+            </div>
+            <div className={'card_block'}>
                 {category.map((v) => {
                     return (
-                        <>
-                            <Col xs={4} className={'allcards'} >
-                                <Card style={{ width: '16rem' }} className={'card'}>
-                                    <Card.Img variant="top" src={v.strCategoryThumb} />
+                        <div className={'test'}>
+                            <div className={'bg_color_card'}>
+                                <Card style={{ width: '18rem' }} className={'card'}>
+                                    <Link to={"/Category/" + v.strCategory}>
+                                        <Card.Img variant="top" className={'card_img'} src={v.strCategoryThumb} />
+                                    </Link>
                                     <Card.Body>
-                                        <Link to={"/Category/" + v.strCategory}> <Card.Title>{v.strCategory}</Card.Title></Link>
+                                        <Card.Title className={'title'}>{v.strCategory}</Card.Title>
                                     </Card.Body>
                                 </Card>
-                            </Col>
-                        </>
+                            </div>
+                        </div>
                     )
                 })}
-            </Row>
+            </div>
         </div>
     )
 }

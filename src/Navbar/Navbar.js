@@ -48,16 +48,16 @@ function Navbar2() {
     }
     return (
         <>
-            <Navbar bg="outline-secondary" expand="lg">
-                <Navbar.Brand href="/">Главная</Navbar.Brand>
+            <Navbar bg="dark" expand="lg">
+                <Navbar.Brand href="/" className ={'nav_text'}>Главная</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mr-auto">
-                        <Nav.Link href={'/Basket'}>Basket({basket1.basket.length})</Nav.Link>
-                        <NavDropdown title="Dropdown" id="basic-nav-dropdown">
+                        <Nav.Link href={'/Basket'} className ={'nav_text'}>Basket({basket1.basket.length})</Nav.Link>
+                        <NavDropdown className ={'nav_text'} title="" id="basic-nav-dropdown">
                             <NavDropdown.Item >{navbar.map((v, i) => {
                                 return (
-                                    <NavDropdown.Item onClick={() => changeCountry(v)}> {v.strArea} </NavDropdown.Item>
+                                    <NavDropdown.Item  onClick={() => changeCountry(v)}> {v.strArea} </NavDropdown.Item>
                                 )
                             })}</NavDropdown.Item>
                         </NavDropdown>

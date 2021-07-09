@@ -3,7 +3,7 @@ import axios from 'axios';
 import { Row } from 'react-bootstrap'
 import { ApiMeals } from '../Api/Api';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {useParams} from "react-router-dom";
+import { useParams } from "react-router-dom";
 import MainCard from './MainCard';
 // import './App.css'
 
@@ -26,12 +26,10 @@ function Meals() {
     }, [])
 
     return (
-        <div>
-            <Row>
-                {category.map((v) => {
-                    return (<MainCard v={v} />)
-                })}
-            </Row>
+        <div className ={'map_cards'}>
+            {category.map((v) => {
+                return (<MainCard v={v} />)
+            })}
         </div>
     )
 }

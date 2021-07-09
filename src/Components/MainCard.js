@@ -7,22 +7,21 @@ import ContextBasket from '../Context/Context';
 const MainCard = ({ v }) => {
     const BasketHere = useContext(ContextBasket)
     return (
-        <>
-            <Col xs={4} className={'allcards'}>
-                <Card style={{ width: '16rem'}} className={'card'} >
-                    <Card.Img variant="top" src={v.strMealThumb}/>
+        <div className ={'test'}>
+            <Card style={{ width: '16rem' }} className={'card_1'} >
+                <Link to={"/meal/" + v.idMeal}>
+                    <Card.Img className ={'card_img'} variant="top" src={v.strMealThumb} />
+                </Link>
                 <Card.Body>
-                    <Link to={"/meal/" + v.idMeal}>
-                        <Card.Title style={{color:'white'}}>
+                    <Card.Title className={'title1'}>
                         {v.strMeal}
-                        </Card.Title>
-                    </Link>
-                    <Button variant={ BasketHere.basket.includes(v) ? 'danger' : 'success'} onClick={() => BasketHere.toogle(v)} >{BasketHere.basket.includes(v) ? 'Удалить из корзины' : 'Добавить в корзину'}</Button>
+                    </Card.Title>
+
+                    <Button variant={BasketHere.basket.includes(v) ? 'outline-danger' : 'outline-warning'} onClick={() => BasketHere.toogle(v)} >{BasketHere.basket.includes(v) ? 'Удалить из корзины' : 'Добавить в корзину'}</Button>
                 </Card.Body>
-                </Card>
-            </Col>
-            {/* Same as */}
-            
-        </>
-    )}
+            </Card>
+
+        </div>
+    )
+}
 export default MainCard;

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import {
     useParams,
 } from "react-router-dom";
-import { Card , Col , Row} from 'react-bootstrap';
+import { Card, Col, Row } from 'react-bootstrap';
 import axios from 'axios';
 import MainCard from './MainCard';
 import { ApiSearch } from '../Api/Api';
@@ -18,7 +18,7 @@ function Searcher() {
     }, [params.idForSearch]);
 
     const SearchApi = () => {
-        axios.get(ApiSearch+params.idForSearch)
+        axios.get(ApiSearch + params.idForSearch)
             .then((response) => {
                 const data = response.data.meals
                 // console.log(data);
@@ -29,15 +29,13 @@ function Searcher() {
             })
     }
     return (
-        <>
-            <Row>
-                {search !== null ? search.map((v) => {
-                    return (
-                        <MainCard v = {v}/>
-                    )
-                }): null}
-            </Row>
-        </>
+        <div className={'map_cards2'}>
+            {search !== null ? search.map((v) => {
+                return (
+                    <MainCard v={v} />
+                )
+            }) : null}
+        </div>
     )
 
 }

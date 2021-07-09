@@ -26,13 +26,9 @@ function App() {
     const remove = (r) => { setBasket(basket.filter((f) => f !== r)) }
     const toogle = (t) => { !basket.includes(t) ? add(t) : remove(t) }
 
-
-
     useEffect(() => {
         localStorage.setItem('key', JSON.stringify(basket))
-    }, [basket])
-
-
+    }, [basket]);
 
     return (
         <>

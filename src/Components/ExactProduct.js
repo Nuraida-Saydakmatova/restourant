@@ -23,20 +23,21 @@ function ExactProduct() {
     }, [])
     return (
         <>
-            <div className={'inline'}>
-                <Card style={{ width: '25rem' , display:'flex' , justifyContent:'end'}}>
-                        <Card.Img variant="top" src={product.strMealThumb} />
-                        <Card.Body>
-                            <h4>
-                                TAGS:{product.strTags}
-                                <hr />
-                                AREA : {product.strArea}
-                            </h4>
-                        </Card.Body>
-                        <h5>
-                            Description : {product.strInstructions}
-                        </h5>
-                </Card>
+            <div className={'exact_block'}>
+                <div className = {'img_exact_box'}>
+                    <img className={'img_exact'} src={product.strMealThumb} />
+                </div>
+                <div className = {'text_exact_box'}>
+                    <h4>
+                        TAGS:{product.strTags}
+                        <hr />
+                        AREA : {product.strArea}
+                    </h4>
+                    <br/>
+                    <h5>
+                        Description : {product.strInstructions}
+                    </h5>
+                </div>
             </div>
 
         </>
