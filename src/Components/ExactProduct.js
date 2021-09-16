@@ -22,24 +22,19 @@ function ExactProduct() {
         }
     }, [])
     return (
-        <>
-            <div className={'inline'}>
-                <Card style={{ width: '25rem' , display:'flex' , justifyContent:'end'}}>
-                        <Card.Img variant="top" src={product.strMealThumb} />
-                        <Card.Body>
-                            <h4>
-                                TAGS:{product.strTags}
-                                <hr />
-                                AREA : {product.strArea}
-                            </h4>
-                        </Card.Body>
-                        <h5>
-                            Description : {product.strInstructions}
-                        </h5>
-                </Card>
-            </div>
-
-        </>
+        <div className={'block_card'}>
+            <Card.Img variant="top" className = {'img_1'} src={product.strMealThumb} />
+            <Card.Body>
+                <h4>
+                    TAGS:{product.strTags}
+                    <hr />
+                    AREA : {product.strArea}
+                </h4>
+                <h5>
+                    Description : {product.strInstructions}
+                </h5>
+            </Card.Body>
+        </div>
     )
 }
 export default ExactProduct;

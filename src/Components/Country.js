@@ -30,7 +30,7 @@ function Country() {
                         <MainCard v = {v}/>
                     )
                 })
-                }
+                }   
             </Row>
         </>
     )

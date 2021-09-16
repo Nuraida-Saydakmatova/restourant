@@ -48,7 +48,7 @@ function Navbar2() {
     }
     return (
         <>
-            <Navbar bg="outline-secondary" expand="lg">
+            <Navbar bg="secondary" expand="lg">
                 <Navbar.Brand href="/">Главная</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
@@ -57,7 +57,7 @@ function Navbar2() {
                         <NavDropdown title="Dropdown" id="basic-nav-dropdown">
                             <NavDropdown.Item >{navbar.map((v, i) => {
                                 return (
-                                    <NavDropdown.Item onClick={() => changeCountry(v)}> {v.strArea} </NavDropdown.Item>
+                                    <NavDropdown.Item key={i} onClick={() => changeCountry(v)}> {v.strArea} </NavDropdown.Item>
                                 )
                             })}</NavDropdown.Item>
                         </NavDropdown>

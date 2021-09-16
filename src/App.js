@@ -30,6 +30,8 @@ function App() {
         localStorage.setItem('key', JSON.stringify(basket))
     }, [basket])
 
+    console.log('123')
+
 
 
     return (
@@ -39,6 +41,7 @@ function App() {
                     basket,
                     toogle,
                     add,
+                    setBasket,
                 }}>
                     <Router>
                         <div >

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { Row, Card, Col } from 'react-bootstrap';
 import axios from 'axios';
 import AOS from 'aos';
-import 'aos/dist/aos.css'
+import 'aos/dist/aos.css';
 
 function Category() {
     const [category, setCategory] = useState([]);
@@ -33,10 +33,10 @@ function Category() {
                 <div className={'menu'}>
                     <h1>CATEGORIES</h1>
                 </div>
-                {category.map((v) => {
+                {category.map((v, i) => {
                     return (
                         <>
-                            <Col xs={4} className={'allcards'} >
+                            <Col key={i} xs={4} className={'allcards'} >
                                 <Card style={{ width: '16rem' }} className={'card'}>
                                     <Card.Img variant="top" src={v.strCategoryThumb} />
                                     <Card.Body>
